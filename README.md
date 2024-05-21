@@ -16,7 +16,7 @@ This project provides a CPU temperature tracking feature and a memory tracking f
   - Close the SMC.
 - **Challenges**:
   - Finding specific SMC keys for the new 3nm M3 Pro chips.
-  - Working with low-level memory without documentation.
+  - Working with low-level memory without documentation for what I was trying to accomplish .
   - Lack of an SDK from Apple for temperature tracking.
 
 ---
@@ -64,7 +64,7 @@ This feature uses the mach library in C to track memory usage. Currently, it can
 
 ## Acknowledgements
 
-Special thanks to various GitHub forums and communities for providing the necessary SMC keys for the M3 Pro and Max chips.
+Special thanks to various GitHub forums and communities for providing the necessary SMC keys for the M3 Pro and Max chips. The biggest help and inspo for at least giving me an idea of what i need to do is https://github.com/macmade/Hot
 
 ---
 
