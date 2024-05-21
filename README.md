@@ -55,7 +55,7 @@ This feature uses the mach library in C to track memory usage. Currently, it can
 
 - **CPU Temperature Tracking**:
   - Finding and incorporating specific SMC keys for the M3 Pro and Max chips.
-  - Handling low-level memory without adequate documentation or an SDK from Apple.
+  - Handling low-level memory without adequate documentation or an SDK from Apple that can be used for temp tracking.
 
 - **Memory Tracking**:
   - Troubleshooting issues with `proc_allinfo` for system-wide memory usage.
