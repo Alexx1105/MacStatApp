@@ -1,15 +1,85 @@
+# CPU and Memory Temperature and Usage Tracking
 
+This project provides a CPU temperature tracking feature and a memory tracking feature. It is designed to access the System Management Controller (SMC) to read and display the CPU temperature in Fahrenheit and to track memory usage.
 
-This project has a CPU temperature tracking feature that is meant work by accessing the System Management Controller or "SMC" and cloning its dictionary, reading the data from the SMC, then returning the raw mutable data values to be converted and printed in human readable fahrenheight form.
+## Features
 
-I did much searching to find the specific SMC keys for the new 3nm M3 pro chips and came across a few Github forums that had all the SMC keys for the M3 pro and Max chips which I incorperated into my program. Dealing with low level memory was the hardest as there was no real documentation for what I am trying to accomplish,
+---
 
-and apple does not offer any sort of SDK for temp tracking a machine's CPU. This part of the project was done in C and obj-C and the general flow of accessing this data was to open the SMC, clone a matching dictionary using IOServiceMatching, reading the data from the smc,
+### CPU Temperature Tracking
 
-converting the raw mutable data into a form swift could interact with it by using bridging headers to then convert the data to Fahrenheight, then closing the SMC. 
+- **Functionality**: Accesses the System Management Controller (SMC), reads raw data, and converts it to human-readable Fahrenheit.
+- **Implementation**:
+  - Access the SMC and clone its dictionary.
+  - Read data from the SMC.
+  - Convert raw mutable data into a form that Swift can interact with using bridging headers.
+  - Close the SMC.
+- **Challenges**:
+  - Finding specific SMC keys for the new 3nm M3 Pro chips.
+  - Working with low-level memory without documentation.
+  - Lack of an SDK from Apple for temperature tracking.
 
+---
 
+### Memory Tracking
 
-The second part of this project is the memory tracking feature, this was done using the mach library built into C.
+- **Functionality**: Tracks memory usage of the current task using the mach library built into C.
+- **Current Status**:
+  - Can return memory usage of the current task.
+  - Working on troubleshooting issues with `proc_allinfo` for system-wide memory usage.
 
-right now the program only can return the memory usage of a current task rather than system wide memory usage as I am still troubleshooting some issues im having with the proc_allinfo method that should allow system wide memory usage to be shown.
+---
+
+## Implementation Details
+
+### CPU Temperature Tracking
+
+This feature was implemented in C and Objective-C. The process involves:
+
+1. Opening the SMC.
+2. Cloning a matching dictionary using `IOServiceMatching`.
+3. Reading data from the SMC.
+4. Converting raw mutable data into a form Swift can interact with.
+5. Converting the data to Fahrenheit.
+6. Closing the SMC.
+
+---
+
+### Memory Tracking
+
+This feature uses the mach library in C to track memory usage. Currently, it can only return the memory usage of the current task. Further work is being done to enable system-wide memory usage tracking using `proc_allinfo`.
+
+---
+
+## Challenges
+
+- **CPU Temperature Tracking**:
+  - Finding and incorporating specific SMC keys for the M3 Pro and Max chips.
+  - Handling low-level memory without adequate documentation or an SDK from Apple.
+
+- **Memory Tracking**:
+  - Troubleshooting issues with `proc_allinfo` for system-wide memory usage.
+
+---
+
+## Acknowledgements
+
+Special thanks to various GitHub forums and communities for providing the necessary SMC keys for the M3 Pro and Max chips.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+For more information, contact me :3 alexh2877@gmail.com 
+
+---
+
+This README provides an overview of the project's features, implementation details, challenges faced, and how to contribute. If you have any questions or need further assistance, please don't hesitate to reach out.
