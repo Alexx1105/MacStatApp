@@ -68,11 +68,6 @@ Special thanks to various GitHub forums and communities for providing the necess
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
 
 Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
