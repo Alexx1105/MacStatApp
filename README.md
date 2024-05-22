@@ -1,4 +1,4 @@
-# CPU and Memory Temperature and Usage Tracking
+# CPU Temperature and Memory Usage Tracking
 
 This project provides a CPU temperature tracking feature and a memory usage tracking feature. It is designed to access the System Management Controller (SMC) to read and display the CPU temps in Fahrenheit aswell as memory usage in gb.
 
