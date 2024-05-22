@@ -1,6 +1,6 @@
 # CPU and Memory Temperature and Usage Tracking
 
-This project provides a CPU temperature tracking feature and a memory tracking feature. It is designed to access the System Management Controller (SMC) to read and display the CPU temperature in Fahrenheit and to track memory usage.
+This project provides a CPU temperature tracking feature and a memory usage tracking feature. It is designed to access the System Management Controller (SMC) to read and display the CPU temps in Fahrenheit aswell as memory usage in gb.
 
 ## Features
 
@@ -10,14 +10,15 @@ This project provides a CPU temperature tracking feature and a memory tracking f
 
 - **Functionality**: Accesses the System Management Controller (SMC), reads raw data, and converts it to human-readable Fahrenheit.
 - **Implementation**:
-  - Access the SMC and clone its dictionary.
-  - Read data from the SMC.
-  - Convert raw mutable data into a form that Swift can interact with using bridging headers.
+  - Access the SMC and clones its dictionary using service matching.
+  - Reads the raw mutable data from the SMC.
+  - Usages bridging headers to convert the C code that retrieved the data into "swift friendly" form.
   - Close the SMC.
+  - Swift calls these C functions and preforms the data value conversion to F° to be displayed to the end user
 - **Challenges**:
   - Finding specific SMC keys for the new 3nm M3 Pro chips.
-  - Working with low-level memory without documentation for what I was trying to accomplish .
-  - Lack of an SDK from Apple for temperature tracking.
+  - Working with low-level memory without proper documentation for what I was trying to accomplish .
+  - Lack of an SDK from Apple for temperature tracking, IOKit is the closest I had.
 
 ---
 
@@ -48,17 +49,6 @@ This feature was implemented in C and Objective-C. The process involves:
 ### Memory Tracking
 
 This feature uses the mach library in C to track memory usage. Currently, it can only return the memory usage of the current task. Further work is being done to enable system-wide memory usage tracking using `proc_allinfo`.
-
----
-
-## Challenges
-
-- **CPU Temperature Tracking**:
-  - Finding and incorporating specific SMC keys for the M3 Pro and Max chips.
-  - Handling low-level memory without adequate documentation or an SDK from Apple that can be used for temp tracking.
-
-- **Memory Tracking**:
-  - Troubleshooting issues with `proc_allinfo` for system-wide memory usage.
 
 ---
 
