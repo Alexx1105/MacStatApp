@@ -41,7 +41,7 @@ Special thanks to various GitHub forums and communities for providing the necess
 
 ---
 
-Feel free to contribute to this project by submitting issues or pull requests. I'm also all ears for advice regarding troubleshooting some of the mentioned challenges and invite more experienced devs to contact me.
+Feel free to contribute to this project by submitting issues or pull requests. I'm also all ears for advice regarding troubleshooting some of the mentioned challenges and invite more experienced devs to reach out!
 Contact me here:3 alexh2877@gmail.com 
 
 ---
