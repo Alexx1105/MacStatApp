@@ -37,7 +37,7 @@ This feature was implemented in C and Objective-C. The process involves:
 
 ## Acknowledgements
 
-Special thanks to various GitHub forums and communities for providing the necessary SMC keys for the M3 Pro and Max chips. The biggest help and inspo for at least giving me an idea of what i need to do is https://github.com/macmade/Hot
+Special thanks to various GitHub forums and communities for providing the necessary SMC keys for the M3 Pro and Max chips. The biggest help and inspo for at least giving me an idea of what i need to do is https://github.com/macmade/Hot 
 
 ---
 
