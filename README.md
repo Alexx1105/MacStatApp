@@ -69,7 +69,7 @@ Special thanks to various GitHub forums and communities for providing the necess
 ---
 
 
-Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+Feel free to contribute to this project by submitting issues or pull requests. I'm also all ears for advice regarding troubleshooting some of the mentioned challenges and invite more experienced devs to contact me.
 
 ---
 
