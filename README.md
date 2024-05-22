@@ -30,7 +30,7 @@ This feature was implemented in C and Objective-C. The process involves:
 - **Functionality**: Tracks memory usage of the current task using the mach library built into C.
 - **Current Status**:
   - Can return memory usage of the current task.
-  - Working on troubleshooting issues with `proc_allinfo` for system-wide memory usage.
+  - Working on troubleshooting issues that I was experiencing with `proc_allinfo` so I can obtain system-wide memory usage.
 
 ---
 ---
