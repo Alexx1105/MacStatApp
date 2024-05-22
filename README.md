@@ -10,7 +10,7 @@ This project provides a CPU temperature tracking feature and a memory usage trac
 
 - **Functionality**: Accesses the System Management Controller (SMC), reads raw data, and converts it to human-readable Fahrenheit.
 - **Implementation**:
-  - Access the SMC and clones its dictionary using service matching.
+  - Access the SMC and clones its dictionary using IOServiceMatching.
   - Reads the raw mutable data from the SMC.
   - Usages bridging headers to convert the C code that retrieved the data into "swift friendly" form.
   - Close the SMC.
