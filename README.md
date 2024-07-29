@@ -4,7 +4,6 @@ This project provides a CPU temperature tracking feature and a memory usage trac
 
 ## Features
 
----
 
 ### CPU Temperature Tracking
 
